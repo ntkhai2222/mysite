@@ -1,0 +1,31 @@
+<div class="p-5">
+    <h1 class="display display-5 text-center"><%= t "hello" %></h1>
+    <hr/>
+    <%= link_to t("newProduct"), new_product_path if authenticated? %> 
+    <h1><%= t "product" %></h1>
+    <table class="table w-75 alert alert-info">
+        <thead>
+            <tr>
+                <th><%= t "id" %></th>
+                <th><%= t "name" %></th>
+                <th><%= t "price" %></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @products.each do |product| %>
+                <tr>
+                    <td><%= product.id%></td>
+                    <td><%= product.name%></td>
+                    <td><%= product.price%></td>
+                    <td>
+                        <%= link_to t('detail'), product, class:"btn btn-success" %>
+                        <% if authenticated? %>
+                        <%= link_to t("edit"), edit_product_path(product), class:"btn btn-primary" %>
+                        <% end %>
+                    </td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>

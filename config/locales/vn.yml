@@ -1,0 +1,13 @@
+vn:
+  hello: "Xin chào"
+  product: "Sản phẩm"
+  newProduct: "Thêm sản phẩm mới"
+  id: "Mã"
+  name: "Tên"
+  price: "Giá"
+  detail: "Chi tiết"
+  edit: "Chỉnh sửa"
+  description: "Thông tin mô tả"
+  success: "Hoàn tất"
+  login: "Đăng nhập"
+  logout: "Đăng xuất"

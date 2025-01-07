@@ -1,0 +1,27 @@
+<div style="display:flex;justify-content:center" class="p-4 mt-3">
+    <div class="w-50 mt-3 alert alert-info">
+        <div style="width:100%">
+            <%= image_tag @product.featured_image if @product.featured_image.attached?%>
+        </div>
+        <% cache @product do %>
+        <h3 class="display display-4">Sản phẩm: <%= @product.name%></h3>
+        <% end %>
+        <i>Mã: <%=@product.id%></i>
+        <hr>
+        <div class="">
+            <h3>Giá: <%= @product.price%></h3>
+            <div>
+                Mô tả:
+                <p>
+                    - <%= @product.description%>
+                </p>
+            </div>
+        </div>
+        <div class="card-footer">
+        </div>
+    </div>
+</div>
+<hr>
+<%= render "inventory", product: @product %>
+
+
